@@ -5,10 +5,13 @@
 {% endif %}
 
 <img src="{{ user.avatar_url }}" class="github-component mb-3" style="max-width: 150px;">
-<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">{% if user.name %}{{ user.name }}{%
-  else %}{{ user.login }}{% endif %}</h1>
-<p style="display:none" class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
-  {{ user.bio }}
+<h1 class="{% if site.style == 'dark' %}text-white{% endif %} mb-2 lh-condensed">
+  <!-- {% if user.name %}{{ user.name }}{% else %}{{ user.login }}{% endif %} -->
+  Shahriar Yazdipour
+</h1>
+<!-- {{ user.bio }} -->
+<p class="mb-3 f4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+  Software Engineer | UI-UX enthusiast
 </p>
 
 {% if include.metadata %}
@@ -25,7 +28,8 @@
   <div class="{{ metadata_styles }}">
     {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
     <a href="mailto:{{ user.email }}" {% if site.style=='dark' %}class="text-white" {% endif %}>
-      {{ user.email }}
+      E-Mail
+      <!-- {{ user.email }} -->
     </a>
   </div>
   {% endif %}
@@ -35,8 +39,12 @@
     {{ user.location }}
   </div>
   {% endif %}
+  <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+    {% octicon briefcase height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+    <a href="https://yazdipour.github.io/documents/" {% if site.style=='dark' %}class="text-white" {% endif %}>CV-Resume</a>
+  </div>
   {% if site.social_media %}
-  <div class="d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+  <div class="ml-3 d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
     {% for account in site.social_media %}
     <div class="mr-3 mb-3">
       {% assign service_shortname = account[0] %}

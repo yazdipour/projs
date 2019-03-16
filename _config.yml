@@ -17,15 +17,18 @@ defaults:
       layout: "post"
 
 projects:
-  sort_by: pushed
+  sort_by: stars
   sort_by options:
+    - stars
   #   - pushed
-     - stars
   limit: 8
   exclude:
     forks: false
     projects:
-    # - repo-name
+      - projs
+      - iran
+      - webogram
+      - bookmarks
 
 social_media:
   linkedin: yazdipour
