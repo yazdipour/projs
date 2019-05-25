@@ -39,26 +39,41 @@
     {{ user.location }}
   </div>
   {% endif %}
-  <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
-    {% octicon briefcase height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
-    <a href="https://yazdipour.github.io/documents/" {% if site.style=='dark' %}class="text-white" {% endif %}>CV-Resume</a>
-  </div>
-  {% if site.social_media %}
-  <div class="ml-3 d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
-    {% for account in site.social_media %}
-    <div class="mr-3 mb-3">
-      {% assign service_shortname = account[0] %}
-      {% assign service = site.data.social_media[service_shortname] %}
-      <a href="{{ service.profile_url_prefix }}{{ account[1] }}" title="{{ service.name }}: {{ account[1] }}" class="tooltipped tooltipped-s"
-        aria-label="{{ service.name }}: {{ account[1] }}">
-        {{ service.icon_svg }}<span class="d-none">{{ service.name }}</span>
-      </a>
-    </div>
-    {% endfor %}
-  </div>
-  {% endif %}
   {% if user.hireable %}
   <span title="Hire me" class="d-inline-block f5 rounded-2 text-white bg-green py-1 px-2">Available for hire</span>
   {% endif %}
 </div>
+<div>
+  <div
+    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+    {% octicon briefcase height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+    <a href="https://yazdipour.github.io/documents/" {% if site.style=='dark' %}class="text-white"
+      {% endif %}>CV-Resume</a>
+  </div>
+  <div
+    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+    {% octicon beaker height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+    <a href="https://yazdipour.github.io/skills/" {% if site.style=='dark' %}class="text-white" {% endif %}>Skills</a>
+  </div>
+  <div
+    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+    {% octicon book height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
+    <a href="https://yazdipour.github.io/notes/" {% if site.style=='dark' %}class="text-white" {% endif %}>NoteBook</a>
+  </div>
+</div>
+{% if site.social_media %}
+<div
+  class="ml-3 d-flex flex-wrap flex-items-start {% if site.layout == 'stacked' %}flex-justify-center mt-1 mt-md-3{% endif %}">
+  {% for account in site.social_media %}
+  <div class="mr-3 mb-3">
+    {% assign service_shortname = account[0] %}
+    {% assign service = site.data.social_media[service_shortname] %}
+    <a href="{{ service.profile_url_prefix }}{{ account[1] }}" title="{{ service.name }}: {{ account[1] }}"
+      class="tooltipped tooltipped-s" aria-label="{{ service.name }}: {{ account[1] }}">
+      {{ service.icon_svg }}<span class="d-none">{{ service.name }}</span>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
 {% endif %}
