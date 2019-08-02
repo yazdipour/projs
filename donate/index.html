@@ -1,7 +1,82 @@
 <html>
-<script>
+	<!-- <script>
 	window.location.href = 'https://www.payping.ir/yazdipour';
-</script>
-<!-- [![Donate RIAL.IR](https://img.shields.io/badge/donate-IRAN-blue.svg)](https://www.payping.ir/yazdipour) -->
-<!-- https://buymeacoff.ee/XrTW5YQDy -->
+</script> -->
+	<!-- [![Donate RIAL.IR](https://img.shields.io/badge/donate-IRAN-blue.svg)](https://www.payping.ir/yazdipour) -->
+	<!-- https://buymeacoff.ee/XrTW5YQDy -->
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://imperavi.com/assets/css/kube.min.css">
+		<style>
+			.button {
+				margin: .7em;
+				color: #fff !important;
+			}
+
+			#container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+			}
+
+			#blackdiv {
+				background-color: #333;
+				padding: .7em;
+				border-radius: 1em;
+			}
+
+			.content {
+				padding: 0 1em;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				background-color: #f1f1f1;
+				border-radius: 1em;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container" class="page">
+			<div class="is-center is-width-small">
+				<h1 class="is-text-center">Donate</h1>
+				<br>
+				<div id="blackdiv" class="is-shadow-2 is-container-column">
+					<a href="https://buymeacoff.ee/XrTW5YQDy" class="button is-inverted is-big"
+						style="background-color: #ED4C67;">Buy a Cafe!</a>
+					<a href="https://www.payping.ir/yazdipour" class="button is-inverted is-big"
+						style="background-color: #20bc71;">PayPing (only IR)</a>
+					<a href="#" class="button is-inverted is-big  is-disabled"
+						style="background-color: #12CBC4;">PayPal</a>
+					<a href="#" class="collapsible button is-inverted is-big"
+						style="background-color: #F79F1F;">Ethereum</a>
+					<div class="content">
+						<img src="./qr.png" alt="0xba650412b1a1e07ea6ab095a88691cbeb0713c29" style="margin: 1em 0;">
+						<p>0xba650412b1a1e07ea6ab095a88691cbeb0713c29</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
+
+		</script>
+	</body>
+
 </html>
