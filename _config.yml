@@ -19,11 +19,11 @@ defaults:
 projects:
   sort_by: stars
   sort_by options:
-    - stars
-  #   - pushed
+    - pushed
+    # - stars
   limit: 8
   exclude:
-    forks: false
+    forks: true
     projects:
       - projs
       - iran
