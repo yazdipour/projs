@@ -5,6 +5,12 @@
         min-height: 300px !important;
     }
 
+    @media (max-width : 420px) {
+        .m-8-onmobile {
+            margin: 8px !important;
+        }
+    }
+
 </style>
 
 <h2 {% if site.style=='dark' %}class="text-white" {% endif %}>Projects</h2>
@@ -51,7 +57,7 @@
                     {
                         tagName: "p",
                         attrs: {
-                            class: "h4 text-gray text-normal ml-1"
+                            class: "h4 text-gray text-normal m-8-onmobile"
                         },
                         children: content
                     }
@@ -179,6 +185,21 @@
         ]
     );
 
+    var ketab = makeTemplate(
+        "https://github.com/yazdipour/ketab-io-android/raw/master/assets/Logo/logo_g.jpg",
+        "Ketab.io for Android",
+        "https://github.com/yazdipour/ketab-io-android",
+        "Github",
+        [
+            "My android side project for Web Security Penetration test and a proof of pentest execution. In other way I am using www.ketab.io security issue to access their private api and make this android application",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/ketab-io-android", "See Screenshot 🖼"),
+            makeBr(),
+            makeLink("https://install.appcenter.ms/users/yazdipour/apps/ketadlr/distribution_groups/public",
+                "Get the apk from Appcenter⏬")
+        ]
+    );
+
     var myContent = [
         gas1,
         gas2,
@@ -187,7 +208,8 @@
         subtitler,
         mebus,
         reader,
-        itehran
+        itehran,
+        ketab
     ];
 
     var container = document.querySelector(".craousel");
