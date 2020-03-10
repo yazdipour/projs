@@ -14,10 +14,6 @@
   </div>
   {% endif %}
 
-  <div class="my-6">
-    {% include projects.html %}
-  </div>
-
   {% unless posts_total == 0 %}
   <div class="my-6">
     {% include thoughts.html %}
@@ -26,6 +22,11 @@
   <div class="my-6">
     {% include works.html %}
   </div>
+
+  <div class="my-6">
+    {% include projects.html %}
+  </div>
+
 </div>
 {% else %}
 <div class="d-md-flex height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
