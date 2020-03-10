@@ -29,7 +29,7 @@
   <div class="{{ metadata_styles }}">
     {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
     <a href="mailto:{{ user.email }}" {% if site.style=='dark' %}class="text-white" {% endif %}>
-      E-Mail
+      EMail
       <!-- {{ user.email }} -->
     </a>
   </div>
@@ -45,22 +45,19 @@
   {% endif %}
 </div>
 <div>
-  <div
-    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+  <div class="pt-1 pb-1 pr-3 pl-3 m-1 {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
     {% octicon briefcase height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
     <a target="_blank" href="https://yazdipour.github.io/documents/" {% if site.style=='dark' %}class="text-white"
       {% endif %}>CV-Resume</a>
   </div>
-  <div
-    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+  <div class="pt-1 pb-1 pr-3 pl-3 m-1 {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
     {% octicon beaker height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
     <a href="https://yazdipour.github.io/skills/" {% if site.style=='dark' %}class="text-white" {% endif %}>Skills</a>
   </div>
-  <div
-    class="pt-1 pb-1 pr-3 pl-3 m-1 bg-white github-component {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
+  <div class="pt-1 pb-1 pr-3 pl-3 m-1 {{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
     {% octicon book height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
     <a target="_blank" href="https://yazdipour.github.io/notes/" {% if site.style=='dark' %}class="text-white"
-      {% endif %}>NoteBook</a>
+      {% endif %}>My NoteBook</a>
   </div>
 </div>
 {% if site.social_media %}
