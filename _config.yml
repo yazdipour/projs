@@ -30,6 +30,7 @@ projects:
       - webogram
       - WindOs
       - TelegramTheme
+      - Infix-Prefix-Postfix-Converter
 
 social_media:
   linkedin: yazdipour
@@ -89,6 +90,6 @@ topics:
     web_url: https://github.com/topics/vuejs
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/vue/vue.png
 
-  - name: VR/AR
-    web_url: https://github.com/topics/vr
-    image_url: https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/unity.png
+  - name: IOT
+    web_url: https://github.com/topics/iot
+    image_url: https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/raspberry-pi/raspberry-pi.png

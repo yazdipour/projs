@@ -1,0 +1,258 @@
+<!-- https://github.com/metxnbr/awesome-slider/ -->
+<script src="https://unpkg.com/awesome-slider/dist/awesome-slider.min.js"></script>
+<style>
+    .craousel>div {
+        min-height: 300px !important;
+    }
+
+    @media (max-width : 420px) {
+        .m-8-onmobile {
+            margin: 8px !important;
+        }
+    }
+
+</style>
+
+<h2 {% if site.style=='dark' %}class="text-white" {% endif %}>Projects</h2>
+<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">Projects I've released.</p>
+<div class="flex-wrap gutter-condensed mb-4">
+    <div class="craousel"></div>
+</div>
+
+<script>
+    function makeTemplate(iconSrc, title, linkHref, linkText, content) {
+        return {
+            tagName: "div",
+            attrs: {
+                class: "github-component d-flex flex-column flex-md-row flex-items-center flex-md-items-center " +
+                    "text-left border-gray-light bg-white rounded-1 m-2"
+            },
+            children: [{
+                tagName: "div",
+                attrs: {
+                    class: "col-2 d-flex flex-items-center flex-items-center flex-md-items-start m-4"
+                },
+                children: [{
+                    tagName: "img",
+                    attrs: {
+                        class: "width-full avatar mb-2 mb-md-0 rounded-2",
+                        style: "min-width: 80px;",
+                        src: iconSrc,
+                        alt: title
+                    }
+                }]
+            }, {
+                tagName: "div",
+                attrs: {
+                    class: "col-12 col-md-10 d-flex flex-column flex-justify-center flex-items-center flex-md-items-start pl-md-4"
+                },
+                children: [{
+                        tagName: "h1",
+                        attrs: {
+                            class: "text-normal lh-condensed"
+                        },
+                        children: [title]
+                    },
+                    makeLink(linkHref, linkText),
+                    {
+                        tagName: "p",
+                        attrs: {
+                            class: "h4 text-gray text-normal m-8-onmobile"
+                        },
+                        children: content
+                    }
+                ]
+            }]
+        };
+    }
+
+    function makeLink(linkHref, linkText) {
+        return {
+            tagName: "a",
+            attrs: {
+                class: "text-gray text-small",
+                href: linkHref,
+                target: "_blank"
+            },
+            children: [linkText]
+        };
+    }
+
+    function makeBr() {
+        return {
+            tagName: "br"
+        };
+    }
+
+    var pocketx = makeTemplate(
+        "https://github.com/yazdipour/pocketx/raw/dev/Assets/icon_v2/pocketx_icon.png",
+        "Pocket✘",
+        "https://github.com/yazdipour/pocketx",
+        "https://github.com/yazdipour/pocketx",
+        [
+            "Unofficial Pocket Client for Universal Windows Platform + Fluent Design",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/pocketx/raw/dev/Assets/Screenshot.png", "See Screenshots 🖼"),
+            makeBr(),
+            makeLink("https://www.microsoft.com/store/apps/9NDT5N34SR2P", "Get it from Microsoft Store⏬")
+        ]
+    );
+
+    var ydm = makeTemplate(
+        "https://github.com/yazdipour/ydm/raw/master/Assets/logo.png",
+        "YDM",
+        "https://github.com/yazdipour/ydm",
+        "https://github.com/yazdipour/ydm",
+        [
+            "YDM is an open source youtube download manager, you can download videos from your own server.",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/ydm/blob/master/README.md", "See Screenshots 🖼")
+        ]
+    );
+
+    var subtitler = makeTemplate(
+        "https://raw.githubusercontent.com/yazdipour/subtitler/master/Subtitler/Assets/StoreLogo.scale-200.png",
+        "Subtitler",
+        "https://github.com/yazdipour/subtitler",
+        "https://github.com/yazdipour/subtitler",
+        [
+            "Subtitle Downloader UWP Application + Php Server with more than 10,000 downloads!",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/subtitler", "See Screenshots 🖼")
+        ]
+    );
+
+    var mebus = makeTemplate(
+        "https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/mebus.png",
+        "MeBus",
+        "https://github.com/yazdipour/mebus-android",
+        "https://github.com/yazdipour/mebus-android",
+        [
+            "User interface implementing of an Android Application.",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/mebus-android", "See Screenshots 🖼"),
+            makeBr(),
+            makeLink("https://install.appcenter.ms/users/yazdipour/apps/mebus/distribution_groups/public",
+                "Get the apk from Appcenter⏬")
+        ]
+    );
+
+    var reader = makeTemplate(
+        "https://raw.githubusercontent.com/yazdipour/blackreader/master/PdfReader/Assets/StoreLogo.scale-200.png",
+        "Black Reader",
+        "https://www.microsoft.com/en-us/p/black-reader/9nblggh68kns?rtc=1&activetab=pivot:overviewtab",
+        "Microsoft Store Link",
+        [
+            "[deprecated] Black Reader is an uwp pdf reader suitable for Nights and dark environments and supports inking. With more than 10,000 downloads",
+        ]
+    );
+
+    var gas2 = makeTemplate(
+        "https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/gas2/icon.png",
+        "Enterprise GIS Android App",
+        "",
+        "",
+        [
+            "Custom map and layer rendering (Offline and Online) + Navigation(Offline and Online) + Background service to notify officers missions + Report generator +... made for Gas Company",
+            makeBr(),
+            makeLink("https://www.youtube.com/watch?v=U55KkZoru6g",
+                "Watch it on YouTube📺"),
+            makeBr(),
+            makeLink("https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/gas2/scrn.png",
+                "See Screenshot 🖼")
+        ]
+    );
+    var gas1 = makeTemplate(
+        "https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/gas1/icon.png",
+        "Customer GIS iOS and Android App",
+        "",
+        "",
+        [
+            "Cross platform Xamarin Forms application for users to report Gas Problems back to Gas Company of Tehran.",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/gas1/scrn.png",
+                "See Screenshot 🖼")
+        ]
+    );
+
+    var itehran = makeTemplate(
+        "https://github.com/yazdipour/yazdipour.github.io/raw/master/assets/itehran.png",
+        "iTehran",
+        "https://www.microsoft.com/en-us/store/apps/itehran/9nblggh1rr0v",
+        "Microsoft Store Link",
+        [
+            "[deprecated] Uwp application to get more information about Tehran public transportation system map and time table. With more than 8,000 downloads",
+            makeBr(),
+            makeLink("https://goo.gl/NEjRCt", "Read about iTehran in WinPhone"),
+            makeLink("http://goo.gl/yNMIOj", ", Zoomit"),
+        ]
+    );
+
+    var ketab = makeTemplate(
+        "https://github.com/yazdipour/ketab-io-android/raw/master/assets/Logo/logo_g.jpg",
+        "Ketab.io for Android",
+        "https://github.com/yazdipour/ketab-io-android",
+        "Github",
+        [
+            "My android side project for Web Security Penetration test and a proof of pentest execution. In other way I am using www.ketab.io security issue to access their private api and make this android application",
+            makeBr(),
+            makeLink("https://github.com/yazdipour/ketab-io-android", "See Screenshot 🖼"),
+            makeBr(),
+            makeLink("https://install.appcenter.ms/users/yazdipour/apps/ketadlr/distribution_groups/public",
+                "Get the apk from Appcenter⏬")
+        ]
+    );
+
+    var myContent = [
+        gas1,
+        gas2,
+        pocketx,
+        ydm,
+        subtitler,
+        mebus,
+        reader,
+        itehran,
+        ketab
+    ];
+
+    var container = document.querySelector(".craousel");
+    var awesomeSlider = new AwesomeSlider(myContent, container);
+
+    // var awesomeSlider = new AwesomeSlider(myContent, container, {
+    //     // ratio
+    //     ratio: 5 / 1,
+    //     // autoplay
+    //     autoplay: true,
+    //     // duration in ms
+    //     duration: 5000,
+    //     // interval in ms
+    //     interval: 3000,
+    //     // custom indicator
+    //     // false or null: disable
+    //     indicator: {
+    //         style: Function,
+    //         active: Function,
+    //     },
+    //     // 1 = Slide 2
+    //     initIndex: 0,
+    //     // custom controls
+    //     // manual: {
+    //     //     previous: previous,
+    //     //     next: next
+    //     // },
+    //     // animation
+    //     timing: Function | String,
+    //     // auto resize the swiper/carousel
+    //     enableResize: true,
+    //     // image loader
+    //     imageDownloading: Object,
+    //     // image placeholder
+    //     imagePlaceholder: Object,
+    //     // additional CSS class(es)
+    //     className: {
+    //         list: '',
+    //         item: ''
+    //     }
+    // });
+
+</script>
