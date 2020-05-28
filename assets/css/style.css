@@ -124,13 +124,16 @@ body {
   font-size: 16px;
 }
 
-body {
-  background-image: url(../imgs/bg.jpg) !important;
-  background-size: 70vh !important;
-  background-repeat: repeat-x !important;
-  background-color: #fefefe !important;
-  margin: 42vh 10vmin 10vh 10vmin !important;
+html {
+  background-image: url(../bg.png);
+  background-size: 74vh;
+  background-repeat: repeat-x;
 }
+
+body {
+  margin: 42vh 10vmin 10vh 10vmin;
+}
+
 ::selection {
   color: rgba(255, 255, 255, 0.99);
   background: rgba(0, 0, 0, 0.99);
@@ -279,9 +282,8 @@ a:visited {
   h1 {
     font-size: 3.5em;
   }
-  .photo {
-    background-image: url(../imgs/bg.jpg);
+  /* .photo {
     background-position: center center;
     height: 140vmin;
-  }
+  } */
 }
