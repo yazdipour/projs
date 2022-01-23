@@ -287,3 +287,24 @@ a:visited {
     height: 140vmin;
   } */
 }
+
+.button_slide {
+  font-family: "Semibold";
+  font-style: normal;
+  padding: 0.5rem;
+  border: 0.5rem solid #222;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  background: #222;
+  margin: 0.5rem;
+  color: white !important;
+}
+.button_slide img {
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+.button_slide a {
+  color: white !important;
+  text-decoration: none !important;
+  text-align: center;
+}
