@@ -1,0 +1,83 @@
+<html>
+	<!-- https://buymeacoff.ee/XrTW5YQDy -->
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./kube.min.css">
+		<style>
+			.button {
+				margin: .7em;
+				color: #fff !important;
+				background-color: rgb(42, 50, 53) !important;
+			}
+
+			#container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+			}
+
+			#blackdiv {
+				padding: .7em;
+				border-radius: 1em;
+				margin: 2em;
+			}
+
+			.content {
+				padding: 0 1em;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
+				background-color: #f1f1f1;
+				border-radius: 1em;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container" class="page">
+			<div class="is-center is-width-small">
+				<h1 class="is-text-center">to Shahriar</h1>
+				<div id="blackdiv" class="is-container-column">
+					<a href="https://paypal.me/zhahriar" class="button is-big" target="_blank">PayPal</a>
+					<a href="https://buymeacoff.ee/XrTW5YQDy" class="button is-big" target="_blank">Buy a Cafe!</a>
+					<a href="https://www.amazon.de/hz/wishlist/ls/2Y5BI1P7GKRSR" class="button is-big"
+						target="_blank">Amazon WhishList</a>
+					<a href="https://www.payping.ir/yazdipour" class="button is-big" target="_blank">PayPing</a>
+					<a href="#" class="collapsible button is-big">BitCoin</a>
+					<div class="content">
+						<img src="./qrBTC.png" alt="bc1qztrkndepzfygz8shrcjjgsl322mzva2g3x6agm" style="margin: 1em 0;">
+						<span
+							style="overflow-wrap: break-word;line-height: 2em;">bc1qztrkndepzfygz8shrcjjgsl322mzva2g3x6agm</span>
+					</div>
+					<a href="#" class="collapsible button is-big">Ethereum \ LINK \ SHIBA \ ...</a>
+					<div class="content">
+						<img src="./qr.png" alt="0x41820356C06dDe21C1505e62d1F82f6E877BDc99" style="margin: 1em 0;">
+						<span
+							style="overflow-wrap: break-word;line-height: 2em;">0x41820356C06dDe21C1505e62d1F82f6E877BDc99</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var content = this.nextElementSibling;
+					if (content.style.maxHeight) {
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
+
+		</script>
+	</body>
+
+</html>
